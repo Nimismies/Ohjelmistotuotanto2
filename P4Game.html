@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Vaihe 4</title>
+<link rel="stylesheet" type="text/css" href="../MenuStyle.css">
+<link rel="stylesheet" type="text/css" href="P4Game.css">
+<script src="GamePlayHandler.js"></script>
+</head>
+<body style="background-color: wheat;" onload= "StartLevel(4)">
+    
+    <div id="timerProgress">
+        <div id="timerBar"></div>
+    </div>
+    <div id="fileAskerDiv">
+    </div>
+    <div class="btn-group" style="text-align-last: center;">
+        
+            <button id="nappi" onClick = "this.style.visibility= 'hidden'; StartLevel(4)">Aloita peli</button> <!-- Startlevel haluaa parametriksi sen levun numeron 
+                                                                                                                                                eli p2gamessa sen pitää olla "StartLevel(2) jne" -->
+        
+        <div id="playField" class="playArea">
+            <div id="folderContainer">
+                <img id="folder" src="images/TestKansioGrafiikka.png" alt=""height="340" width="600">
+                <img id="folder" src="images/TestKansioGrafiikka.png" alt=""height="340" width="600">
+                <img id="folder" src="images/TestKansioGrafiikka.png" alt=""height="340" width="600">
+                <img id="folder" src="images/TestKansioGrafiikka.png" alt=""height="340" width="600">
+            </div>
+            <div id="container">
+            
+                <div class="row" id ="asiakaslista.txt"     onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> asiakaslista.txt</p></div>
+                <div class="row" id ="cv.txt"               onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> cv.txt</p></div>
+                <div class="row" id ="käyttöohjeet.txt"     onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> käyttöohjeet.txt</p></div>
+                <div class="row" id ="muistiinpanot.txt"    onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> muistiinpanot.txt</p></div>
+                <div class="row" id ="osallistujat.txt"     onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> osallistujat.txt</p></div>
+                <div class="row" id ="suunnitelma.txt"      onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> suunnitelma.txt</p></div>
+                <!--seuraavat 6 on niitä "turhia" eikä varmaan tarvii olla aakkosjärjestyksessä?-->
+                <div class="row" id ="readme.txt"               onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> readme.txt</p></div>
+                <div class="row" id ="kauppalista.txt"          onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> kauppalista.txt</p></div>
+                <div class="row" id ="joululauluja.txt"         onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> joululauluja.txt</p></div>
+                <div class="row" id ="saunanlämmitysohjeet.txt" onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> saunanlämmitysohjeet.txt</p></div>
+                <div class="row" id ="mökki.txt"                onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> mökki.txt</p></div>
+                <div class="row" id ="turha.txt"                onclick = "ClickedRight(this, 4)"><img src="images/txt.PNG" alt=""height="60" width="60"><p id="fileText"> turha.txt</p></div>
+
+                <div class="row" id ="chrome.exe"                 onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> chrome.exe</p></div>
+                <div class="row" id ="discordinstaller.exe"       onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> discordinstaller.exe</p></div>
+                <div class="row" id ="installer.exe"              onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> installer.exe</p></div>
+                <div class="row" id ="mökkivarausjärjestelmä.exe" onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> mökkivarausjärjestelmä.exe</p></div>
+                <div class="row" id ="visualstudio.exe"           onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> visualstudio.exe</p></div>
+                <div class="row" id ="vlc.exe"                    onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> vlc.exe</p></div>
+                <!--seuraavat 6 on niitä "turhia" eikä varmaan tarvii olla aakkosjärjestyksessä?-->
+                <div class="row" id ="steaminstaller.exe"   onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> steaminstaller.exe</p></div>
+                <div class="row" id ="virus.exe"            onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> virus.exe</p></div>
+                <div class="row" id ="openJDK11U.exe"       onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> openJDK11U.exe</p></div>
+                <div class="row" id ="winrar.exe"           onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> winrar.exe</p></div>
+                <div class="row" id ="asentaja.exe"         onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> asentaja.exe</p></div>
+                <div class="row" id ="velho.exe"            onclick = "ClickedRight(this, 4)"><img src="images/exe.PNG" alt=""height="60" width="60"><p id="fileText"> velho.exe</p></div>
+
+                <div class="row" id ="auto.jpg"         onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> auto.jpg</p></div>
+                <div class="row" id ="banner.jpg"       onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> banner.jpg</p></div>
+                <div class="row" id ="header.jpg"       onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> header.jpg</p></div>
+                <div class="row" id ="kopio.jpg"        onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> kopio.jpg</p></div>
+                <div class="row" id ="mökkimaisema.jpg" onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> mökkimaisema.jpg</p></div>
+                <div class="row" id ="taustakuva.jpg"   onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> taustakuva.jpg</p></div>
+                <!--seuraavat 6 on niitä "turhia" eikä varmaan tarvii olla aakkosjärjestyksessä?-->
+                <div class="row" id ="jee.jpg"          onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> jee.jpg</p></div>
+                <div class="row" id ="lomakuva.jpg"     onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> lomakuva.jpg</p></div>
+                <div class="row" id ="aa.jpg"           onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> aa.jpg</p></div>
+                <div class="row" id ="koulukuva.jpg"    onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> koulukuva.jpg</p></div>
+                <div class="row" id ="joulukortti.jpg"  onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> joulukortti.jpg</p></div>
+                <div class="row" id ="meemi.jpg"        onclick = "ClickedRight(this, 4)"><img src="images/jpg.PNG" alt=""height="60" width="60"><p id="fileText"> meemi.jpg</p></div>
+
+                <div class="row" id ="beep.mp3"         onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> beep.mp3</p></div>
+                <div class="row" id ="clicksound.mp3"   onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> clicksound.mp3</p></div>
+                <div class="row" id ="effect.mp3"       onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> effect.mp3</p></div>
+                <div class="row" id ="notification.mp3" onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> notification.mp3</p></div>
+                <div class="row" id ="soundtrack.mp3"   onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> soundtrack.mp3</p></div>
+                <div class="row" id ="voice.mp3"        onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> voice.mp3</p></div>
+                <!--seuraavat 6 on niitä "turhia" eikä varmaan tarvii olla aakkosjärjestyksessä?-->
+                <div class="row" id ="soittoääni.mp3"   onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> soittoääni.mp3</p></div>
+                <div class="row" id ="herätysääni.mp3"  onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> herätysääni.mp3</p></div>
+                <div class="row" id ="ringtone.mp3"     onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> ringtone.mp3</p></div>
+                <div class="row" id ="song.mp3"         onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> song.mp3</p></div>
+                <div class="row" id ="mökkiääni.mp3"    onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> mökkiääni.mp3</p></div>
+                <div class="row" id ="perjantai.mp3"    onclick = "ClickedRight(this, 4)"><img src="images/mp3.png" alt=""height="60" width="60"><p id="fileText"> perjantai.mp3</p></div>
+            </div>
+            </div>
+        </div>
+    
+
+</body>
+</html>
